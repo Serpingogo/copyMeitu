@@ -1,0 +1,138 @@
+@import "module/baseCss.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+.title-main{
+    height: 70px;
+    
+    font-size: 16px;
+    border-bottom: 1px solid #dedede;
+    h4{
+        width: 96%;
+        line-height: 70px;
+        margin: 0 auto;
+    }
+}
+.detail-show{
+    width: 96%;
+    margin: 0 auto;
+    .imgshow{
+        float: left;
+        width: 45%;
+        overflow: hidden;
+        position: relative;
+        ul{
+            height: 600px;
+            padding-top: 30px;
+            width: 3000px;
+            li{
+                float: left;
+                img{
+                    width: 540px;
+                    height: 540px;
+                    background-color: #f60;
+                }
+            }
+           
+        }
+        button{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 300px;
+            z-index: 6;
+            &:first-of-type{
+                left: 20px;
+            }
+            &:last-of-type{
+                right: 20px;
+            }
+        }        
+
+    }
+    .datashow{
+        float: left;
+        width: 55%;
+        ul{
+            padding: 20px;
+            li{                
+                line-height: 70px;                
+                border-bottom: 1px solid #dedede;               
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000;
+                }                
+                &:first-child{                   
+                    p{
+                        font-size: 12px;
+                        color: #555;
+                        line-height: 24px;
+                    }
+                }
+                &:nth-child(2),&:nth-child(3){
+                    display: flex;
+                    justify-content: space-between;                    
+                } 
+                &:nth-child(3){
+                    a{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #dedede;
+                        border-radius: 50%;
+                        color: #dedede;
+                        font-size: 12px;
+                        font-weight: normal;
+                        text-align: center;
+                        line-height: 18px;                        
+                        &:hover{
+                            color:$hoverColor;
+                            border-color: $hoverColor;
+                            text-decoration: none;
+                        }
+                    }
+                    input{
+                        width: 50px;
+                        height: 20px;
+                        border: 1px solid #dedede;
+                        outline: none;
+                        text-align: center;
+                        margin: 0 5px;
+                    }
+                }
+                &:last-child{
+                    text-align: end;
+                    border: none;
+                    *{
+                        display: inline-block;
+                    }
+                    span{                                                
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: $hoverColor;
+                    }
+                    a{
+                        &:first-of-type {
+                            width: 226px;
+                            height: 40px;
+                            line-height: 40px;
+                            background-color:$hoverColor;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 16px;
+                            border-radius: 4px;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                        &:last-of-type{
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #555;
+                        }
+                    }
+                }              
+            }
+        }
+    }
+}

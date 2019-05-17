@@ -1,0 +1,112 @@
+@import "../libs/bootstrap/css/bootstrap.min.css";
+@import "module/baseCss.scss";
+@import "module/footer.scss";
+html,body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+fieldset{
+    width: 400px;
+    margin: 50px auto 50px;
+    padding: 50px;
+    border: none;
+    legend{
+        text-align: center;  
+        border: none;           
+    }
+    .LGcontainer form{
+        margin-bottom: 100px;
+        label{
+            display: block;
+            margin-bottom: 10px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            border-bottom: 1px solid #eeeeee;
+            span{
+                display: inline-block;
+                width: 20%;
+                height: 100%;
+                text-align: center; 
+                padding: 0 1em;                    
+            }
+            input{
+                width: 80%;
+                height: 94%;
+                border: none;
+                outline: none;
+                outline-offset: none;           
+                padding: 0 1em;
+            }
+        }
+        &>a{
+            font-size: 12px;
+            display: block;
+            text-align: right;
+            padding: 1em;
+        }  
+        &>button{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 20px; 
+            outline-offset: none;
+            outline: none;
+            font-weight: 700;
+            color: #555555;
+            margin-bottom: 10px
+        } 
+        &>p{
+            text-align: center;
+            a{
+                padding: 0 1em;
+            }
+        } 
+    }
+    .LGcontainer>div{
+        margin: 0 auto;
+        width: 60%;
+        text-align: center;
+        position: relative;
+        border-top: 1px solid #555555;
+        padding-top: 30px;
+        span{ 
+            position: absolute; 
+            width: 80%;
+            background: #fff;          
+            font-size: 14px;
+            font-weight: normal;
+            top: -10px;
+            left: 10%;
+        }
+        a{
+            margin: 0 .5em;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%
+        }
+    }
+}
+#footer{
+    flex: 1;     
+}
+.footer-wrapper{       
+    .footer-bottom{    
+        text-align: center;
+        font-size: 14px;
+        p{
+            line-height: 24px
+        }
+        span{
+            display: inline-block;
+            width: 80px;
+            height: 22px;
+            margin-bottom: 12px;
+            background: url('../images/3343596400.png') no-repeat center;
+        }
+    }
+}

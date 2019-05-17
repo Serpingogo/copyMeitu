@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/goods.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="main">
+        <div class="goodsBanner">
+            <h4>配件</h4>
+            <div class="goodsHtmlBanner"></div>
+        </div>
+        <div class="goodsNav">
+            <ul class="cl goodsnav">
+                <li class="ac">全部商品</li>
+                <li>充电器</li>
+                <li>手机壳</li>
+                <li>拍摄配件</li>
+                <li>生活周边</li>
+            </ul>
+        </div>  
+        <div id="goodsContainer" class="goodContainer"></div>
+        <script type="text/html" id="goodcontainer-template">
+            <ul class="cl row">
+                {{each good item}}
+                <li class="col-md-3">
+                    <a href="{{item.link}}?id={{item.id}}" target="_blank">
+                        <img src="{{item.image}}"/>
+                        <p>
+                            <span>{{item.title}}</span>
+                            <span>{{item.price}}</span>
+                        </p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul> 
+        </script>
+    </div>
+    <div id="footer-container"></div>    
+    <script type="text/javascript" src="../libs/requirejs/require.js" data-main="../js/goods.js"></script>
+</body>
+</html>

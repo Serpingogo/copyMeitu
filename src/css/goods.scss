@@ -1,0 +1,96 @@
+@import "module/baseCss.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+.goodsBanner{
+    h4{
+        height: 70px;
+        line-height: 70px;
+        font-size: 18px;
+        width: 96%;
+        margin: 0 auto;
+    }
+    .goodsHtmlBanner{
+        height: 426px;
+        background: #000;
+    }
+}
+.goodsNav{
+    border-bottom: 1px solid #dedede;
+    .goodsnav{
+        width: 96%;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 5em; 
+        height: 70px;   
+        li{
+            float: left;          
+            margin-right: 1em;
+            color: #333;
+            cursor: pointer;
+            &:hover{
+                color: $hoverColor;
+            }
+        }
+        .ac{
+            color: $hoverColor;
+        }
+    }
+}
+.goodContainer{
+    width: 96%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 2em;         
+    &>ul{
+        &>li{
+            float: left;           
+            height: calc(50px + 50px + 2em + 220px + 48px);
+            border-bottom: 1px solid #dedede;
+            border-right: 1px solid #dedede; 
+            box-sizing: border-box;
+            padding: 0;                        
+            &:nth-child(4n){
+                border-right: none;
+            }           
+            a{
+                display: block;
+                text-align: center;               
+                width: 100%;
+                height: 100%;
+                padding: 50px 0;                                                
+                &:hover{
+                    transition: all .5s linear;   
+                    text-decoration: none;
+                    margin-top: -1px;
+                    box-shadow: 0px 0px 5px 5px #dedede;                                     
+                }
+                img{
+                    width: 220px;
+                    height: 220px;
+                    background: #f60;                      
+                    margin-bottom: 15px;                                              
+                }
+                p{                    
+                    span{
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;                         
+                        &:first-child{
+                            color: #333;
+                            &:hover{
+                                color: $hoverColor;                                  
+                            }
+                        }
+                        &:last-child{
+                            color:$hoverColor;                              
+                            font-weight: bold;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+    
+}
+   
+

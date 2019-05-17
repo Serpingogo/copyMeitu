@@ -1,0 +1,21 @@
+body,div,a,p,li,ul,img,dl,dt,dt,i,b{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+.cl::after{
+    display: block;
+    height: 0;
+    content: "";
+    visibility: hidden;
+    clear: both;
+}
+$hoverColor:#e82878;
