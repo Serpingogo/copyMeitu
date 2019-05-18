@@ -51,8 +51,10 @@ require(["require-config"],()=>{
                     $('#subtotal').html((this.num*this.money).toFixed(2)); 
                 });
                 this.numInput.on('keyup',()=>{
-                    this.num = Number(this.numInput.val());                                      
-                    $('#subtotal').html((this.num*this.money).toFixed(2));
+                    let muchmoney = null;
+                    this.num = Number(this.numInput.val()); 
+                    muchmoney =  this.num*this.money;                                    
+                    $('#subtotal').html(muchmoney.toFixed(2));
                 }); 
                 this.addShopBag.on('click',()=>{
                     this.addCart();

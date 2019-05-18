@@ -1,5 +1,5 @@
 require(['require-config'],()=>{
-    require(['url','jquery'],(url,$)=>{
+    require(['url','jquery','cookie'],(url,$)=>{
         class Login{
             constructor(){                
                 this.LGcon = $("#loginRegContainer") 
@@ -28,8 +28,8 @@ require(['require-config'],()=>{
                     "success":data=>{
                         if(data.res_code===1){
                             alert(data.res_message+'，即将跳转至首页');
-                            location.href='/';
-                            //将值存入cookie
+                            location.href='/';                            
+                            $.cookie("user",userName,{"path":"/"})
                         }else{
                             alert(data.res_message)
                         }

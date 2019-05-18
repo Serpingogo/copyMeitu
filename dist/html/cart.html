@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>仿美图官网购物车</title><link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="../css/cart.css"></head><body><div id="header-container"></div><div id="main"><div class="title-main"><h4>购物袋内的商品</h4></div><div id="goodsList"></div><script type="text/html" id="cart-template"><div class="cartLists">
+                    <div>
+                        {{each cartli good}}                
+                            <ul class="goods" data-id={{good.id}}>
+                                <li><span class="{{good.cls}}" data-check="{{good.check}}"></span></li>
+                                <li><img src="{{good.images[0]}}" alt="tupian"></li>
+                                <li>
+                                    <p>{{good.title}}</p>
+                                    <p>{{good.subtitle}}l</p>
+                                </li>
+                                <li>
+                                    ￥<b class="subtotal" data-money="{{good.num*good.price}}">{{good.price}}</b>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-minus minus"></span>
+                                    <input type="text" value="{{good.num}}" class="numInput">
+                                    <span class="glyphicon glyphicon-plus plus"></span>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </li>
+                            </ul>
+                        {{/each}}
+                        <div>
+                            <span>总计：<b id="total"></b></span><br/>
+                            <span>结账<i></i></span>
+                        </div>
+                    </div>            
+                </div></script></div><div id="footer-container"></div><script src="../libs/requirejs/require.js" data-main="../js/cart"></script></body></html>

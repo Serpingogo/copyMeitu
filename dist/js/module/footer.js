@@ -1,0 +1,1 @@
+"use strict";define(["jquery"],function(t){function n(){this.container=t("#footer-container"),this.loadHtml()}return t.extend(n.prototype,{loadHtml:function(){this.container.load("/html/module/footer.html")}}),new n});

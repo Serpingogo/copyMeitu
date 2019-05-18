@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>商品详情页面</title><link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="../css/detail.css"></head><body><div id="header-container"></div><div id="main"><div id="detailContainer"></div><script type="text/html" id="detail-template"><div class="title-main">
+                <h4>{{good.title}}</h4>
+            </div>
+            <div class="detail-show">
+                <div class="imgshow">
+                    <ul class="cl">
+                        {{each images image}}
+                            <li><img src="{{image}}" alt=""></li>
+                        {{/each}}
+                    </ul>
+                    <button id="goPrev">&ltcc;</button>
+                    <button id="goNext">&gtcc;</button>
+                </div>
+                <div class="datashow">
+                    <ul>
+                        <li>                        
+                            <span>{{good.title}}</span>
+                            <p>{{good.subtitle}}</p>
+                        </li>
+                        <li>
+                            <span>{{good.classes.name}}</span><span>蓝色</span><span>修改</span>
+                        </li>
+                        <li>
+                            <span>购买数量</span>
+                            <span>
+                                <a href="javascript:;" class="glyphicon glyphicon-minus" id="minus"></a><input type="text" value="1" id="num"><a href="javascript:;" class="glyphicon glyphicon-plus" id="plus"></a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>￥<span id="subtotal">{{good.price}}</span></span><br/>
+                            <a href="javascript:;" data-id={{good.id}} id="purchaseNow">立即购买</a><br/>
+                            <a href="javascript:;" data-id={{good.id}} id="addShopBag">添加到购物袋</a>
+                        </li>
+                    </ul>
+                </div>
+            </div></script></div><div id="footer-container"></div><script src="../libs/requirejs/require.js" data-main="../js/detail"></script></body></html>
